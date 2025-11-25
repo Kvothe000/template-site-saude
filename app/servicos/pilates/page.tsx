@@ -13,8 +13,8 @@ export default function PilatesPage() {
 <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-lg mb-8">
   <Image 
     // Use o 'src' correto para cada página
-    src="/gallery/fisioterapia-pilates.jpg" 
-    alt="Sala de Fisioterapia e Pilates da FisioVitalitá" 
+    src="/gallery/pilates.jpg" 
+    alt="Sala de Fisioterapia e Pilates" 
     
     fill // "fill" faz a imagem preencher o 'div' pai
     

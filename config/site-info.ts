@@ -15,12 +15,14 @@ export const siteConfig = {
   hero: {
     title: "Recupere sua qualidade de vida",
     subtitle: "Especialistas em Fisioterapia e Pilates",
-    buttonText: "Agendar Consulta"
+    buttonText: "Agendar Consulta",
+    backgroundImage: "/gallery/hero-bg.jpg"
   },
   
   about: {
     title: "Sobre Nós",
     description: "Na Fisio Vitalita, acreditamos que cada paciente é único. Nossa abordagem humanizada e técnica especializada garantem os melhores resultados na sua reabilitação.",
+    image: "/gallery/about-image.jpg",
     features: [
       "Atendimento personalizado",
       "Profissionais especializados", 

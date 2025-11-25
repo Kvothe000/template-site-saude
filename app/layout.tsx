@@ -9,10 +9,12 @@ import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
+import { siteConfig } from '@/config/site-info'
+
 export const metadata: Metadata = {
-  title: 'FisioVitalitá - Sua Saúde em Equilíbrio',
-  description: 'Clínica de fisioterapia, pilates, acupuntura e terapias holísticas.',
-};
+  title: siteConfig.businessName,
+  description: siteConfig.about.description,
+}
 
 export default function RootLayout({
   children,

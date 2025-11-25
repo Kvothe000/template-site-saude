@@ -5,17 +5,17 @@ import TeamMemberCard from '@/components/TeamMemberCard';
 // Assim que você tiver as fotos e infos, só precisamos atualizar aqui.
 const teamMembers = [
   {
-    name: "Dra. Daiane Borges",
-    title: "Fisioterapeuta",
-    crefito: "CREFITO 84.007",
-    imageUrl: "", // Deixe em branco para usar o placeholder
+    name: "Profissional 1",
+    title: "Especialidade (ex: Fisioterapeuta)",
+    crefito: "Registro Profissional",
+    imageUrl: "/team/member1-placeholder.jpg", // Deixe em branco para usar o placeholder
   },
   // ...
   {
-    name: "Matheus (Dev de Teste)",
-    title: "Desenvolvedor Web",
-    crefito: "GitHub: Kvothe000",
-    imageUrl: "/team/minha-foto-teste.jpg", // <--- O CAMINHO CORRETO
+    name: "Profissional 2",
+    title: "Especialidade (ex: Pilates)",
+    crefito: "Registro Profissional",
+    imageUrl: "/team/member-placeholder.jpg", // <--- O CAMINHO CORRETO
   },
 // ...
   {

@@ -7,8 +7,8 @@ export default function MassoterapiaPage() {
       
 <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-lg mb-8">
   <Image 
-    src="/gallery/massagem-holisticas.jpg" 
-    alt="Sala de Massoterapia da FisioVitalitá" 
+    src="/gallery/pilates.jpg" 
+    alt="Sala de Massoterapia" 
     fill
     
     // === A MUDANÇA ESTÁ AQUI ===
