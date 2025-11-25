@@ -1,6 +1,4 @@
 import Image from 'next/image' // <--- Importante importar o componente Image
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 import { siteConfig } from '@/config/site-info'
 
 export default function Home() {
