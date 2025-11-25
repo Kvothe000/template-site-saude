@@ -8,7 +8,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       
       {/* --- HERO SECTION COM IMAGEM DE FUNDO --- */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
@@ -119,7 +118,6 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 }
