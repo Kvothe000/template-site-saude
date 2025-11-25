@@ -1,14 +1,14 @@
 // src/config/site-info.ts
 export const siteConfig = {
   // Informações básicas do negócio
-  businessName: "Fisio Vitalita",
-  phone: "(51) 99999-9999",
+  businessName: "Fisio exemplo",
+  phone: "(51) 980106108",
   address: "Rua Exemplo, 123 - Porto Alegre, RS",
-  email: "contato@fisiovitalita.com.br",
+  email: "azirmatheus@gmail.com.com.br",
   
   // Redes sociais
-  instagram: "@fisiovitalita",
-  facebook: "fisiovitalita",
+  instagram: "@matheusazir",
+  facebook: "exemplo",
   googleMapsLink: "https://maps.google.com/?q=Fisio+Vitalita+Porto+Alegre",
   
   // Conteúdo das seções
@@ -21,7 +21,7 @@ export const siteConfig = {
   
   about: {
     title: "Sobre Nós",
-    description: "Na Fisio Vitalita, acreditamos que cada paciente é único. Nossa abordagem humanizada e técnica especializada garantem os melhores resultados na sua reabilitação.",
+    description: "Na Fisio exemplo, acreditamos que cada paciente é único. Nossa abordagem humanizada e técnica especializada garantem os melhores resultados na sua reabilitação.",
     image: "/gallery/about-image.jpg",
     features: [
       "Atendimento personalizado",
