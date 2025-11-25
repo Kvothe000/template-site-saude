@@ -1,5 +1,7 @@
-import Image from 'next/image' // <--- Importante importar o componente Image
+import Image from 'next/image'
 import { siteConfig } from '@/config/site-info'
+import TeamMemberCard from '@/components/TeamMemberCard' // <--- Importe
+import TestimonialCard from '@/components/TestimonialCard' // <--- Importe
 
 export default function Home() {
   const whatsappNumber = siteConfig.phone.replace(/\D/g, '')
@@ -7,19 +9,16 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       
-      {/* --- HERO SECTION COM IMAGEM DE FUNDO --- */}
+      {/* --- HERO (Mantido Igual) --- */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
-        {/* Imagem de Fundo (Dark Overlay para o texto aparecer bem) */}
-        <div className="absolute inset-0 bg-black/50 z-10" /> {/* Filtro escuro */}
+        <div className="absolute inset-0 bg-black/50 z-10" />
         <Image
           src={siteConfig.hero.backgroundImage}
           alt="Background Clínica"
           fill
           className="object-cover z-0"
-          priority // Carrega rápido por ser a primeira dobra
+          priority
         />
-
-        {/* Conteúdo (Fica por cima da imagem z-20) */}
         <div className="container mx-auto px-4 text-center z-20 relative">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-md">
             {siteConfig.hero.title}
@@ -38,12 +37,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SOBRE NÓS COM GRID (Texto + Imagem) --- */}
+      {/* --- SOBRE (Mantido Igual) --- */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            
-            {/* Coluna da Imagem */}
             <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src={siteConfig.about.image}
@@ -52,8 +49,6 @@ export default function Home() {
                 className="object-cover hover:scale-105 transition duration-500"
               />
             </div>
-
-            {/* Coluna do Texto */}
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gray-800">
                 {siteConfig.about.title}
@@ -70,12 +65,11 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Services Section (Mantido igual, só garantindo o espaçamento) */}
+      {/* --- SERVIÇOS (Mantido Igual) --- */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
@@ -92,7 +86,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact CTA (Mantido igual) */}
+      {/* --- EQUIPE (NOVA SEÇÃO) --- */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+            {siteConfig.team.title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto justify-center">
+            {siteConfig.team.members.map((member, index) => (
+              <TeamMemberCard 
+                key={index}
+                name={member.name}
+                title={member.role}
+                crefito={member.crefito}
+                imageUrl={member.image}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* --- DEPOIMENTOS (NOVA SEÇÃO) --- */}
+      <section className="py-20 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+            {siteConfig.testimonials.title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {siteConfig.testimonials.items.map((item, index) => (
+              <TestimonialCard
+                key={index}
+                name={item.name}
+                role={item.role}
+                quote={item.quote}
+                // imageUrl={item.image} // Se tiver foto, descomente
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* --- CTA FINAL (Mantido Igual) --- */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
