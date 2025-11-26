@@ -56,7 +56,9 @@ export const siteConfig = {
   contact: {
     title: "Entre em Contato",
     subtitle: "Estamos aqui para ajudar na sua recuperação",
-    openingHours: "Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h"
+    openingHours: "Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h",
+    googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.8576937276!2d-51.2294719!3d-30.1346347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951981f07dc13de1%3A0x795ab148f0cf20c0!2sAv.%20Tramanda%C3%AD%2C%20435%20-%20Ipanema%2C%20Porto%20Alegre%20-%20RS%2C%2091760-050!5e0!3m2!1spt-BR!2sbr!4v1716234567890!5m2!1spt-BR!2sbr"
+
   },
 // NOVO: Seção da Equipe
   team: {
