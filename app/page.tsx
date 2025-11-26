@@ -77,36 +77,51 @@ export default function Home() {
       </section>
 
       {/* --- SERVIÇOS (Fundo Branco para Contraste) --- */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">{siteConfig.services.title}</h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">Conheça nossas especialidades</p>
-          </div>
+<section className="py-24 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl font-bold text-gray-800 mb-4 relative inline-block">
+        {siteConfig.services.title}
+        {/* Detalhe visual sutil no título */}
+        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-blue-100 rounded-full"></span>
+      </h2>
+      <p className="text-gray-500 max-w-2xl mx-auto mt-4">Conheça nossas especialidades</p>
+    </div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {siteConfig.services.items.map((service, index) => (
+        // Card com fundo cinza bem claro e borda sutil
+        <div 
+          key={index} 
+          className="bg-slate-50 flex flex-col h-full p-6 rounded-2xl border border-slate-100 transition-all duration-300 group hover:shadow-xl hover:border-blue-100 hover:-translate-y-1"
+        >
+          {/* Título Maior e em Azul */}
+          <h3 className="text-xl font-bold mb-4 text-blue-700 group-hover:text-blue-600 transition-colors">
+            {service.title}
+          </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {siteConfig.services.items.map((service, index) => (
-              // Card com fundo cinza bem claro para destacar no fundo branco
-              <div key={index} className="bg-slate-50 p-8 rounded-xl border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-2xl group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  ✨
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{service.description}</p>
-                {/* BOTÃO WHATSAPP DIRETO (Matador de Vendas) */}
-              <a
-                href={`https://wa.me/55${whatsappNumber}?text=Olá! Gostaria de saber mais sobre o tratamento de ${encodeURIComponent(service.title)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 bg-gray-50 text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-green-500 hover:text-white transition-all duration-300 border border-gray-200 hover:border-green-500"
-              >
-                <span>💬</span> Agendar {service.title}
-              </a>
-              </div>
-            ))}
-          </div>
+          {/* Descrição */}
+          <p className="text-gray-600 leading-relaxed text-sm mb-8 flex-grow">
+            {service.description}
+          </p>
+
+          {/* Botão de Agendar Elegante */}
+          <a
+            href={`https://wa.me/55${whatsappNumber}?text=Olá! Gostaria de saber mais sobre o agendamento de ${encodeURIComponent(service.title)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all duration-300
+                     bg-white text-blue-600 border border-blue-100 shadow-sm
+                     hover:bg-blue-600 hover:text-white hover:border-transparent hover:shadow-md"
+          >
+            <span className="text-lg">📅</span> {/* Ícone de calendário neutro */}
+            Agendar
+          </a>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* --- EQUIPE (Fundo Cinza Novamente - Alternância Visual) --- */}
       <section className="py-24 bg-slate-50">
