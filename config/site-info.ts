@@ -4,7 +4,7 @@ export const siteConfig = {
   businessName: "Fisio exemplo",
   phone: "(51) 980106108",
   address: "Rua Exemplo, 123 - Porto Alegre, RS",
-  email: "azirmatheus@gmail.com.com.br",
+  email: "azirmatheus@gmail.com.br",
   
   // Redes sociais
   instagram: "@matheusazir",

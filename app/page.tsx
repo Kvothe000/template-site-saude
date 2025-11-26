@@ -93,6 +93,15 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-800">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm">{service.description}</p>
+                {/* BOTÃO WHATSAPP DIRETO (Matador de Vendas) */}
+              <a
+                href={`https://wa.me/55${whatsappNumber}?text=Olá! Gostaria de saber mais sobre o tratamento de ${encodeURIComponent(service.title)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 bg-gray-50 text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-green-500 hover:text-white transition-all duration-300 border border-gray-200 hover:border-green-500"
+              >
+                <span>💬</span> Agendar {service.title}
+              </a>
               </div>
             ))}
           </div>
