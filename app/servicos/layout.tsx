@@ -80,19 +80,7 @@ export default function ServicosLayout({
               </ul>
             </div>
             
-            {/* Card de CTA (Call to Action) */}
-            <div className="bg-[#5B21B6] text-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-2xl font-semibold mb-4">Pronto para Começar?</h3>
-              <p className="mb-6 opacity-90">
-                Agende sua avaliação e dê o primeiro passo para uma vida com mais saúde.
-              </p>
-              <Link 
-                href="/agendamento"
-                className="bg-white text-[#5B21B6] px-5 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors"
-              >
-                Agendar Agora
-              </Link>
-            </div>
+            
 
           </aside>
         </div>
