@@ -1,41 +1,44 @@
-
 import { siteConfig } from '@/config/site-info'
 
 export default function Services() {
   const whatsappNumber = siteConfig.phone.replace(/\D/g, '')
 
   return (
-    <div className="min-h-screen flex flex-col">
-      
-      <main className="flex-grow py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-12">
+    // Removemos min-h-screen, Header e Footer pois o layout já cuida disso
+    <main className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h1 className="text-4xl font-bold mb-4 text-gray-900">
             {siteConfig.services.title}
           </h1>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {siteConfig.services.items.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition">
-                <h2 className="text-2xl font-semibold mb-4 text-blue-600">
-                  {service.title}
-                </h2>
-                <p className="text-gray-700 mb-6">
-                  {service.description}
-                </p>
-                <a
-                  href={`https://wa.me/55${whatsappNumber}?text=Olá! Gostaria de saber mais sobre ${service.title}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition inline-block"
-                >
-                  Saber Mais
-                </a>
-              </div>
-            ))}
-          </div>
+          <p className="text-xl text-gray-600">
+            Conheça nossas especialidades e como podemos ajudar na sua recuperação.
+          </p>
         </div>
-      </main>
-
-    </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {siteConfig.services.items.map((service, index) => (
+            <div key={index} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-xl transition duration-300 group">
+              <h2 className="text-2xl font-bold mb-4 text-blue-600 group-hover:text-blue-700 transition">
+                {service.title}
+              </h2>
+              <p className="text-gray-600 mb-8 leading-relaxed h-24 overflow-hidden">
+                {service.description}
+              </p>
+              
+              {/* BOTÃO WHATSAPP DIRETO (Matador de Vendas) */}
+              <a
+                href={`https://wa.me/55${whatsappNumber}?text=Olá! Gostaria de saber mais sobre o tratamento de ${encodeURIComponent(service.title)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 bg-gray-50 text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-green-500 hover:text-white transition-all duration-300 border border-gray-200 hover:border-green-500"
+              >
+                <span>💬</span> Agendar {service.title}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </main>
   )
 }
