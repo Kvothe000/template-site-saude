@@ -6,7 +6,7 @@ import Image from 'next/image';
 // Adicione uma descrição para cada imagem (bom para acessibilidade e SEO)
 // SUBSTITUA O ARRAY 'galleryImages' ANTIGO POR ESTE:
 const galleryImages = [
-  { src: "/gallery/fachada.jpg", alt: "Fachada da clínica FisioVitalitá" },
+  { src: "/gallery/fachada.jpg", alt: "Fachada da clínica" },
   { src: "/gallery/fisioterapia-pilates.jpg", alt: "Equipamentos de Pilates e Fisioterapia" },
   { src: "/gallery/massagem-holisticas.jpg", alt: "Sala de massoterapia e terapias holísticas" },
   // Adicione mais fotos aqui quando ela te mandar

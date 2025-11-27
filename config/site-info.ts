@@ -1,7 +1,7 @@
 // src/config/site-info.ts
 export const siteConfig = {
   // Informações básicas do negócio
-  businessName: "Fisio exemplo",
+  businessName: "Poliana Espíndola Nutrição",
   phone: "(51) 980106108",
   address: "Rua Exemplo, 123 - Porto Alegre, RS",
   email: "azirmatheus@gmail.com.br",
@@ -13,10 +13,10 @@ export const siteConfig = {
   
   // Conteúdo das seções
   hero: {
-    title: "Recupere sua qualidade de vida",
-    subtitle: "Especialistas em Fisioterapia e Pilates",
+    title: "Nutrição focada em emagrecimento e longevidade sem dietas restritivas.",
+    //subtitle: "Especialistas em Fisioterapia e Pilates",
     buttonText: "Agendar Consulta",
-    backgroundImage: "/gallery/hero-bg.jpg"
+    backgroundImage: "/gallery/nutricao.jpg"
   },
   
   about: {
