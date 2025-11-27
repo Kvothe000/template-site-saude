@@ -13,8 +13,8 @@ export const siteConfig = {
   
   // Conteúdo das seções
   hero: {
-    title: "Nutrição focada em emagrecimento e longevidade sem dietas restritivas.",
-    //subtitle: "Especialistas em Fisioterapia e Pilates",
+    title: "Nutrição focada em emagrecimento.",
+    subtitle: "Especialista em longevidade sem dietas restritivas",
     buttonText: "Agendar Consulta",
     backgroundImage: "/gallery/nutricao.jpg"
   },
